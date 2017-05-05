@@ -1,21 +1,12 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1></h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <nav>
+      <div id="logo">Good vs Bad UX</div>
+      <router-link to="/" v-for="(c,i) in categories" key="i">
+        <div class="category">{{ c }}</div>
+      </router-link>
+    </nav>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -24,37 +15,64 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      categories: ["Button", "Dialog", "404 page", "Search", "Navigation", "Form", "Chat", "Notification", "Map", "List"]
     }
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  * {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-h1, h2 {
-  font-weight: normal;
-}
+  h1 {
+    text-align: center;
+    margin: 60px 0;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  a {
+    text-decoration: none;
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  html, body {
+    height: 100%;
+    width: 100%;
+    background: #ececec;
+  }
 
-a {
-  color: #42b983;
-}
+  nav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    left: 0; top: 0;
+    background: #fff;
+    border-right: 1px solid #ccc;
+  }
+
+  #logo {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #F62459;
+    font-weight: 600;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+
+  .category {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .category:hover {
+    background: #ececec;
+    color: #F62459;
+  }
 </style>
