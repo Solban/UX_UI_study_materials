@@ -1,0 +1,3 @@
+- Kõik kategooriad
+- Kategooria näited
+- Näide
