@@ -17,7 +17,8 @@
                 </div>
                 <div class="explanation full" v-if="showCorrect && examples[active].description !== ''"><i class="material-icons">lightbulb_outline</i> {{ examples[active].description }}</div>
             </div>
-            <button @click="next">Next example</button>
+            <button class="previous-btn" @click="previous"><i class="material-icons">keyboard_arrow_left</i> Previous</button>
+            <button class="next-btn" @click="next">Next <i class="material-icons">keyboard_arrow_right</i></button>
         </div>
     </div>
 </template>
@@ -31,15 +32,14 @@
       return {
         showCorrect: false,
         active: 0,
-        category: 'Button',
-        examples: examples['Button']
+        category: this.$route.params['category'],
+        examples: examples[this.$route.params['category']]
       }
     },
     mounted() {
-      let category = this.$route.params['category'];
-      if (category) {
-        this.category = category;
-        this.examples = examples[category];
+      let id = this.$route.params['id'];
+      if (id) {
+        this.examples = [examples[this.$route.params['category']][id]]
       }
     },
     methods: {
@@ -49,7 +49,14 @@
             this.active = 0;
           }
           this.showCorrect = false;
+        },
+      previous() {
+        this.active--;
+        if (this.active === -1) {
+          this.active = this.examples.length - 1;
         }
+        this.showCorrect = false;
+      }
     }
   }
 </script>
@@ -130,5 +137,42 @@
         text-align: center;
         border-radius: 50%;
         margin-right: 5px;
+    }
+
+    button {
+        height: 40px;
+        border: none;
+        width: 150px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    button.previous-btn {
+        float: left;
+        margin-left: 15px;
+        background: #ddd;
+    }
+
+    button.previous-btn:hover {
+        background: #d2d2d2;
+    }
+
+    button.next-btn {
+        float: right;
+        margin-right: 15px;
+        background: #F62459;
+        color: #fff;
+    }
+
+    button.next-btn:hover {
+        background: #e52357;
+    }
+
+    button.next-btn .material-icons {
+        color: #fff;
     }
 </style>

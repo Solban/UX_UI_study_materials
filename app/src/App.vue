@@ -6,12 +6,12 @@
         <div class="category" @click="active = c">{{ c }}</div>
       </router-link>
     </nav>
-    <router-view></router-view>
+    <router-view :key="$route.fullPath"></router-view>
   </div>
 </template>
 
 <script>
-  import examples from './examples';
+import examples from './examples';
 
 export default {
   name: 'app',
@@ -24,7 +24,7 @@ export default {
   mounted() {
     let category = this.$route.params['category'];
     if (category) {
-      this.active = category;
+      this.active = this.$route.params['category'];
     }
   }
 }

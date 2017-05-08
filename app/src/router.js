@@ -16,6 +16,11 @@ export default new Router({
       path: '/:category',
       name: 'Category',
       component: Home
+    },
+    {
+      path: '/:category/:id',
+      name: 'Example',
+      component: Home
     }
   ]
 });
