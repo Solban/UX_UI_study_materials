@@ -5,8 +5,8 @@ Template:
     {
       img1: '',
       img2: '',
-      do: '',
-      dont: '',
+      img1_text: '',
+      img2_text: '',
       description: ''
     }
 
@@ -18,8 +18,8 @@ module.exports = {
     {
       img1: '',
       img2: '',
-      do: '',
-      dont: '',
+      img1_text: '',
+      img2_text: '',
       description: ''
     }
   ],
@@ -27,8 +27,8 @@ module.exports = {
     {
       img1: '',
       img2: '',
-      do: '',
-      dont: '',
+      img1_text: '',
+      img2_text: '',
       description: ''
     }
   ],
@@ -36,8 +36,8 @@ module.exports = {
     {
       img1: '',
       img2: '',
-      do: '',
-      dont: '',
+      img1_text: '',
+      img2_text: '',
       description: ''
     }
   ],
@@ -45,8 +45,8 @@ module.exports = {
     {
       img1: '',
       img2: '',
-      do: '',
-      dont: '',
+      img1_text: '',
+      img2_text: '',
       description: ''
     }
   ],
@@ -54,8 +54,8 @@ module.exports = {
     {
       img1: '',
       img2: '',
-      do: '',
-      dont: '',
+      img1_text: '',
+      img2_text: '',
       description: ''
     }
   ],
@@ -63,8 +63,8 @@ module.exports = {
     {
       img1: '',
       img2: '',
-      do: '',
-      dont: '',
+      img1_text: '',
+      img2_text: '',
       description: ''
     }
   ],
@@ -72,8 +72,8 @@ module.exports = {
     {
       img1: '',
       img2: '',
-      do: '',
-      dont: '',
+      img1_text: '',
+      img2_text: '',
       description: ''
     }
   ],
@@ -81,8 +81,8 @@ module.exports = {
     {
       img1: '',
       img2: '',
-      do: '',
-      dont: '',
+      img1_text: '',
+      img2_text: '',
       description: ''
     }
   ],
@@ -90,8 +90,8 @@ module.exports = {
     {
       img1: '',
       img2: '',
-      do: '',
-      dont: '',
+      img1_text: '',
+      img2_text: '',
       description: ''
     }
   ],
@@ -99,8 +99,8 @@ module.exports = {
     {
       img1: '',
       img2: '',
-      do: '',
-      dont: '',
+      img1_text: '',
+      img2_text: '',
       description: ''
     }
   ],
@@ -108,8 +108,8 @@ module.exports = {
     {
       img1: '',
       img2: '',
-      do: '',
-      dont: '',
+      img1_text: '',
+      img2_text: '',
       description: ''
     }
   ]
