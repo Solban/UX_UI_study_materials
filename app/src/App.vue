@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav>
-      <div id="logo">Good vs Bad UX</div>
+      <div id="logo">Good vs Bad UI</div>
       <router-link :to="'/' + c" v-for="(c,i) in categories" :key="i" :class="{ active: c === active}">
         <div class="category" @click="active = c">{{ c }}</div>
       </router-link>

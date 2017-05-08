@@ -1,24 +1,26 @@
 <template>
     <div class="content">
         <div class="container">
-            <h1>Which UX is good?</h1>
+            <h1>Which UI is good?</h1>
             <div class="examples">
                 <div class="example left" @click="showCorrect = true">
-                    <img :src="examples[active].img1">
+                    <img :src="left.img">
                 </div><div class="example" @click="showCorrect = true">
-                    <img :src="examples[active].img2">
+                    <img :src="right.img">
                 </div>
                 <div class="example left">
-                    <div class="correct" v-if="showCorrect">Do</div>
-                    <div class="explanation" v-if="showCorrect">{{ examples[active].img1_text }}</div>
+                    <div class="correct" v-if="showCorrect && examples[active].img1 === left.img">Do</div>
+                    <div class="incorrect" v-if="showCorrect && examples[active].img1 !== left.img">Don't</div>
+                    <div class="explanation" v-if="showCorrect">{{ left.img_text }}</div>
                 </div><div class="example">
-                    <div class="incorrect" v-if="showCorrect">Don't</div>
-                    <div class="explanation" v-if="showCorrect">{{ examples[active].img2_text }}</div>
+                    <div class="correct" v-if="showCorrect && examples[active].img1 === right.img">Do</div>
+                    <div class="incorrect" v-if="showCorrect && examples[active].img1 !== right.img">Don't</div>
+                    <div class="explanation" v-if="showCorrect">{{ right.img_text }}</div>
                 </div>
-                <div class="explanation full" v-if="showCorrect && examples[active].description !== ''"><i class="material-icons">lightbulb_outline</i> {{ examples[active].description }}</div>
+                <div class="explanation full" v-if="showCorrect && examples[active].description !== ''"><i class="material-icons">lightbulb_outline</i> <p>{{ examples[active].description }}</p></div>
+                <button class="previous-btn" @click="previous"><i class="material-icons">keyboard_arrow_left</i> Previous</button>
+                <button class="next-btn" @click="next">Next <i class="material-icons">keyboard_arrow_right</i></button>
             </div>
-            <button class="previous-btn" @click="previous"><i class="material-icons">keyboard_arrow_left</i> Previous</button>
-            <button class="next-btn" @click="next">Next <i class="material-icons">keyboard_arrow_right</i></button>
         </div>
     </div>
 </template>
@@ -33,7 +35,9 @@
         showCorrect: false,
         active: 0,
         category: this.$route.params['category'],
-        examples: examples[this.$route.params['category']]
+        examples: examples[this.$route.params['category']],
+        left: {img: "", img_text: ""},
+        right: {img: "", img_text: ""}
       }
     },
     mounted() {
@@ -41,21 +45,49 @@
       if (id) {
         this.examples = [examples[this.$route.params['category']][id]]
       }
+      this.randomize();
     },
     methods: {
-        next() {
-          this.active++;
-          if (this.examples.length === this.active) {
-            this.active = 0;
+      randomize() {
+        let example = this.examples[this.active];
+        let min = 1;
+        let max = 2;
+        let random = Math.floor(Math.random() * (max - min + 1)) + min;
+        if (random === 1) {
+          this.left = {
+            img: example.img1,
+            img_text: example.img1_text
+          };
+          this.right = {
+            img: example.img2,
+            img_text: example.img2_text
           }
-          this.showCorrect = false;
-        },
+        } else {
+          this.right = {
+            img: example.img1,
+            img_text: example.img1_text
+          };
+          this.left = {
+            img: example.img2,
+            img_text: example.img2_text
+          }
+        }
+      },
+      next() {
+        this.active++;
+        if (this.examples.length === this.active) {
+          this.active = 0;
+        }
+        this.showCorrect = false;
+        this.randomize();
+      },
       previous() {
         this.active--;
         if (this.active === -1) {
           this.active = this.examples.length - 1;
         }
         this.showCorrect = false;
+        this.randomize();
       }
     }
   }
@@ -72,12 +104,13 @@
     }
 
     .examples {
-        width: 800px;
+        width: 1200px;
         margin: 0 auto;
+        padding-bottom: 60px;
     }
 
     .example {
-        width: 400px;
+        width: 600px;
         display: inline-block;
         cursor: pointer;
         padding: 20px;
@@ -85,7 +118,7 @@
 
     .example img {
         max-width: 100%;
-        max-height: 500px;
+        max-height: 600px;
         border-bottom: 5px solid transparent;
     }
 
@@ -98,13 +131,17 @@
         text-align: right;
     }
 
+    .example.left .correct, .example.left .incorrect {
+        text-align: left;
+    }
+
     .correct, .incorrect {
         width: 100%;
         text-transform: uppercase;
-        text-align: left;
         padding: 5px 0 0 0;
         font-weight: 700;
         font-size: 14px;
+        text-align: right;
     }
 
     .correct {
@@ -115,7 +152,6 @@
     .incorrect {
         border-top: 5px solid red;
         color: red;
-        text-align: right;
     }
 
     .explanation {
@@ -126,6 +162,7 @@
 
     .explanation.full {
         line-height: 30px;
+        margin: 15px 15px 50px 15px;
     }
 
     .explanation .material-icons {
@@ -136,7 +173,13 @@
         line-height: 30px;
         text-align: center;
         border-radius: 50%;
-        margin-right: 5px;
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    .explanation p {
+        display: inline-block;
+        width: calc(100% - 45px);
     }
 
     button {
