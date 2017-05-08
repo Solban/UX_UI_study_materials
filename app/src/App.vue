@@ -2,8 +2,8 @@
   <div id="app">
     <nav>
       <div id="logo">Good vs Bad UX</div>
-      <router-link to="/" v-for="(c,i) in categories" key="i">
-        <div class="category">{{ c }}</div>
+      <router-link :to="'/' + c" v-for="(c,i) in categories" :key="i" :class="{ active: c === active}">
+        <div class="category" @click="active = c">{{ c }}</div>
       </router-link>
     </nav>
     <router-view></router-view>
@@ -11,11 +11,20 @@
 </template>
 
 <script>
+  import examples from './examples';
+
 export default {
   name: 'app',
   data () {
     return {
-      categories: ["Button", "Dialog", "404 page", "Search", "Navigation", "Form", "Chat", "Notification", "Map", "List"]
+      categories: Object.keys(examples),
+      active: 'Button'
+    }
+  },
+  mounted() {
+    let category = this.$route.params['category'];
+    if (category) {
+      this.active = category;
     }
   }
 }
@@ -28,6 +37,7 @@ export default {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    vertical-align: top;
   }
 
   h1 {
@@ -42,7 +52,7 @@ export default {
   html, body {
     height: 100%;
     width: 100%;
-    background: #ececec;
+    background: #f5f5f5;
   }
 
   nav {
@@ -71,8 +81,34 @@ export default {
     cursor: pointer;
   }
 
-  .category:hover {
+  .category:hover, a.active .category {
     background: #ececec;
     color: #F62459;
   }
+
+  .material-icons {
+    font-family: 'Material Icons', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
 </style>

@@ -3,17 +3,19 @@
         <div class="container">
             <h1>Which UX is good?</h1>
             <div class="examples">
-                <div class="example" @click="showCorrect = true">
-                    <img :src="examples[activeExample].image1">
-                    <div class="correct" v-if="showCorrect && examples[activeExample].correct === 0">Do</div>
-                    <div class="incorrect" v-if="showCorrect && examples[activeExample].correct !== 0">Don't</div>
-                    <div class="explanation" v-if="showCorrect">{{ examples[activeExample].explanation1 }}</div>
+                <div class="example left" @click="showCorrect = true">
+                    <img :src="examples[active].img1">
                 </div><div class="example" @click="showCorrect = true">
-                    <img :src="examples[activeExample].image2">
-                    <div class="correct" v-if="showCorrect && examples[activeExample].correct === 1">Do</div>
-                    <div class="incorrect" v-if="showCorrect && examples[activeExample].correct !== 1">Don't</div>
-                    <div class="explanation" v-if="showCorrect">{{ examples[activeExample].explanation2 }}</div>
+                    <img :src="examples[active].img2">
                 </div>
+                <div class="example left">
+                    <div class="correct" v-if="showCorrect">Do</div>
+                    <div class="explanation" v-if="showCorrect">{{ examples[active].img1_text }}</div>
+                </div><div class="example">
+                    <div class="incorrect" v-if="showCorrect">Don't</div>
+                    <div class="explanation" v-if="showCorrect">{{ examples[active].img2_text }}</div>
+                </div>
+                <div class="explanation full" v-if="showCorrect && examples[active].description !== ''"><i class="material-icons">lightbulb_outline</i> {{ examples[active].description }}</div>
             </div>
             <button @click="next">Next example</button>
         </div>
@@ -21,39 +23,32 @@
 </template>
 
 <script>
+  import examples from '../examples';
+
   export default {
     name: 'home',
     data () {
       return {
         showCorrect: false,
-        examples: [
-          {
-            image1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0BxFyKV4eeNjDb3BRZzNaT2R2V1E/style_color_uiapplication_accent3.png',
-            image2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0BxFyKV4eeNjDNGw2OGFydndWQTA/style_color_uiapplication_accent4.png',
-            explanation1: 'Use a secondary color for certain text, such as linked text.',
-            explanation2: 'Don’t use bright colors for body text, even if your primary or secondary colors are bright.',
-            correct: 0
-          },
-          {
-            image1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bzhp5Z4wHba3b1BpT0dRd0tFaUE/components_bottomsheets_modal_do.png',
-            image2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bzhp5Z4wHba3UTB0bG8tYWxVRG8/components_bottomsheets_modal_dont.png',
-            explanation1: '',
-            explanation2: '',
-            correct: 0
-          }
-        ],
-        activeExample: 0
+        active: 0,
+        category: 'Button',
+        examples: examples['Button']
       }
     },
     mounted() {
-      this.activeExample = 0
+      let category = this.$route.params['category'];
+      if (category) {
+        this.category = category;
+        this.examples = examples[category];
+      }
     },
     methods: {
         next() {
-          this.activeExample++;
-          if (this.examples.length === this.activeExample) {
-            this.activeExample = 0;
+          this.active++;
+          if (this.examples.length === this.active) {
+            this.active = 0;
           }
+          this.showCorrect = false;
         }
     }
   }
@@ -113,11 +108,27 @@
     .incorrect {
         border-top: 5px solid red;
         color: red;
+        text-align: right;
     }
 
     .explanation {
         width: 100%;
         margin: 15px 0;
         text-align: left;
+    }
+
+    .explanation.full {
+        line-height: 30px;
+    }
+
+    .explanation .material-icons {
+        height: 30px;
+        width: 30px;
+        background: #f9e72e;
+        color: #f5f5f5;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        margin-right: 5px;
     }
 </style>
