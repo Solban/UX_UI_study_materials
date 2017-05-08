@@ -4,17 +4,18 @@
             <h1>Which UX is good?</h1>
             <div class="examples">
                 <div class="example" @click="showCorrect = true">
-                    <img :src="examples[0].image1">
-                    <div class="correct" v-if="showCorrect && examples[0].correct === 0">Do</div>
-                    <div class="incorrect" v-if="showCorrect && examples[0].correct !== 0">Don't</div>
-                    <div class="explanation" v-if="showCorrect">{{ examples[0].explanation1 }}</div>
+                    <img :src="examples[activeExample].image1">
+                    <div class="correct" v-if="showCorrect && examples[activeExample].correct === 0">Do</div>
+                    <div class="incorrect" v-if="showCorrect && examples[activeExample].correct !== 0">Don't</div>
+                    <div class="explanation" v-if="showCorrect">{{ examples[activeExample].explanation1 }}</div>
                 </div><div class="example" @click="showCorrect = true">
-                    <img :src="examples[0].image2">
-                    <div class="correct" v-if="showCorrect && examples[0].correct === 1">Do</div>
-                    <div class="incorrect" v-if="showCorrect && examples[0].correct !== 1">Don't</div>
-                    <div class="explanation" v-if="showCorrect">{{ examples[0].explanation2 }}</div>
+                    <img :src="examples[activeExample].image2">
+                    <div class="correct" v-if="showCorrect && examples[activeExample].correct === 1">Do</div>
+                    <div class="incorrect" v-if="showCorrect && examples[activeExample].correct !== 1">Don't</div>
+                    <div class="explanation" v-if="showCorrect">{{ examples[activeExample].explanation2 }}</div>
                 </div>
             </div>
+            <button @click="next">Next example</button>
         </div>
     </div>
 </template>
@@ -40,11 +41,20 @@
             explanation2: '',
             correct: 0
           }
-        ]
+        ],
+        activeExample: 0
       }
     },
+    mounted() {
+      this.activeExample = 0
+    },
     methods: {
-
+        next() {
+          this.activeExample++;
+          if (this.examples.length === this.activeExample) {
+            this.activeExample = 0;
+          }
+        }
     }
   }
 </script>
