@@ -233,6 +233,71 @@ module.exports = {
       img2_text: 'When navigating downwards into the content hierarchy, it would be appropriate to show an Up arrow.',
       description: ''
     },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQscExOcHhfYUdNZlE/components_tabs_usage_example1.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsLXRnbUdwOW9XYXM/components_tabs_usage_example2.png',
+      img1_text: 'The tabs switch between equally important facets of store content.',
+      img2_text: 'The tabs switch between destinations of varied importance within the store.',
+      description: 'Use tabs to organize content at a high level, for example, to present different sections of a newspaper. Don’t use tabs for carousels or pagination of content. Those use cases involve viewing content, not navigating between groups of content.'
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsTTdvazhjTHlsWjg/components_tabs_usage_example5.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsVlczRTlQek9ObW8/components_tabs_usage_example6.png',
+      img1_text: 'Tabs are presented as a single row.',
+      img2_text: 'Tabs are not presented as a single column.',
+      description: ''
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsVmowR3NUVWoxVWs/components_tabs_usage_example3.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsSDROTXNUNUdxMVE/components_tabs_usage_example4.png',
+      img1_text: 'Use a content hierarchy such that tabs relate to the currently displayed content.',
+      img2_text: 'Tabs should not be nested.',
+      description: ''
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bzhp5Z4wHba3WFR6bnJvaG9wclk/components_tabs_usage_content1.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsWll4Mk43cTVldlU/components_tabs_usage_content2.png',
+      img1_text: 'A long label exceeding the maximum width of a tab may wrap to a second line before being truncated.',
+      img2_text: 'Wrap labels before truncating them. Truncating labels too early can impede comprehension.',
+      description: ''
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bzhp5Z4wHba3WFR6bnJvaG9wclk/components_tabs_usage_content1.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsbllqdHVoMHRZTlk/components_tabs_usage_content3.png',
+      img1_text: 'A long label exceeding the maximum width of a tab may wrap to a second line before being truncated.',
+      img2_text: 'Don\'t resize single-line labels. If labels are too long, wrap text across two lines or use scrollable tabs',
+      description: ''
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bzhp5Z4wHba3WFR6bnJvaG9wclk/components_tabs_usage_content1.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsa2g3QkZxOE5FdGs/components_tabs_usage_content4.png',
+      img1_text: '',
+      img2_text: '',
+      description: 'Do not combine text labels with icons. Use either all text labels or all icon labels.'
+    },
+    {
+      img1: '',
+      img2: '',
+      img1_text: '',
+      img2_text: '',
+      description: ''
+    },
+  ],
+  'Tooltip': [
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsZ3pOU1BrYzZuUWM/components_tooltips_usage1.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsb3YzV0VDOFhMY1U/components_tooltips_usage2.png',
+      img1_text: '',
+      img2_text: '',
+      description: 'Use tooltips for interactive imagery. '
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsc2t3ZC1BYjh4XzQ/components_tooltips_usage3.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsbDBoVW53SjlJaE0/components_tooltips_usage4.png',
+      img1_text: '',
+      img2_text: 'Tooltips don’t display rich information including images and formatted text. Tooltips don’t have directional arrows; instead, they rely on motion emanating from the source to convey direction.',
+      description: 'Tooltips are different than ALT-attributes, which are intended primarily for static images.'
+    },
   ],
   'Form': [
     {
@@ -241,7 +306,7 @@ module.exports = {
       img1_text: '',
       img2_text: '',
       description: ''
-    }
+    },
   ],
   'Chat': [
     {
@@ -254,12 +319,47 @@ module.exports = {
   ],
   'Notification': [
     {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7M2QzbjlPWUwtcXc/components_toasts_usage1.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7YzA0VE1uS0xPd2s/components_toasts_usage2.png',
+      img1_text: '',
+      img2_text: '',
+      description: 'Snackbars should contain a single line of text directly related to the operation performed. They may contain a text action. They cannot contain icons.'
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7cno2UTE4MmEwQlE/components_toasts_usage3.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7ZDd4OXY0X0t3cEE/components_toasts_usage4.png',
+      img1_text: '',
+      img2_text: '',
+      description: 'Snackbars automatically time out from the screen. For usability reasons, snackbars should not contain the only way to access a core use case. They should not be persistent or be stacked, as they are above other elements on screen.'
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7Mm5pd0t5VmVRb1U/components_toasts_usage5.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7Mm02RldQdm5XWTA/components_toasts_usage6.png',
+      img1_text: '',
+      img2_text: '',
+      description: 'If an action is present, comply with dialog spacing and affordance rules. For two or more actions, use a dialog, not a snackbar, even when one of the actions is a dismiss action. If the action described in the snackbar is important enough to block the use of the screen, it should be a dialog.'
+    },
+    {
       img1: '',
       img2: '',
       img1_text: '',
       img2_text: '',
       description: ''
-    }
+    },
+    {
+      img1: '',
+      img2: '',
+      img1_text: '',
+      img2_text: '',
+      description: ''
+    },
+    {
+      img1: '',
+      img2: '',
+      img1_text: '',
+      img2_text: '',
+      description: ''
+    },
   ],
   'Map': [
     {
@@ -293,11 +393,97 @@ module.exports = {
       description: ''
     },
     {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7ZVpFMDhCbXlXaEk/components_grids_behavior1.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7dFdYTzkxLTI0X1E/components_grids_behavior2.png',
+      img1_text: 'Indicate content overflow by cutting off grid tiles.',
+      img2_text: 'Avoid aligning grid tiles along a view edge in the view’s initial scroll position. This positioning doesn’t effectively communicate that there is more content available.',
+      description: 'Cut off grid tiles in the view’s initial scroll position to communicate the scroll direction for content overflow.'
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsTEYtcnczU3J5ZEU/components_lists_behavior1.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsM0pZZjFTNTFmNU0/components_lists_behavior2.png',
+      img1_text: 'Alphabetical sorting makes information easier to find.',
+      img2_text: 'Don’t display information in random order; if the UI doesn’t allow the user to sort a list, your app should use a logical sort order.',
+      description: 'List tiles can be sorted or filtered by date, file size, alphabetical order, or other parameters.'
+    },
+    {
       img1: '',
       img2: '',
       img1_text: '',
       img2_text: '',
       description: ''
+    },
+    {
+      img1: '',
+      img2: '',
+      img1_text: '',
+      img2_text: '',
+      description: ''
+    },
+  ],
+  'Menu': [
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bzhp5Z4wHba3Nk96b1dDMTVXUVU/components_menus_usage3do.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bzhp5Z4wHba3UXdRTnVZOE5OaTg/components_menus_usage3dont.png',
+      img1_text: 'The title “View” accurately describes the unifying characteristic of the menu items it contains.',
+      img2_text: 'The title “Stuff” is not descriptive and does not help users predict what menu items they will find in the Stuff menu.',
+      description: 'Menus display a consistent set of menu items. A menu item may be enabled or disabled based on the current state of the application.'
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bzhp5Z4wHba3Y3dpRUd5MmxxdFU/components_menus_behavior2.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bzhp5Z4wHba3NVA1STlJU1VaTW8/components_menus_behavior3.png',
+      img1_text: 'The currently selected menu item appears over the emitting element.',
+      img2_text: 'Do not display a duplicate of the selected menu item.',
+      description: 'Menus are positioned over their emitting elements such that the currently selected menu item appears on top of the emitting element.'
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQscEN4TlItQ1R4d3c/components_dialogs_simplemenus2.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsWVNNYWoxV3hYT28/components_dialogs_simplemenus5.png',
+      img1_text: 'The currently selected menu item aligns vertically over the list item.',
+      img2_text: 'The first menu item is arbitrarily positioned over the list item, regardless of the currently selected menu item.',
+      description: 'When opened, simple menus attempt to vertically align the currently selected menu item with the list item. The currently selected menu item is highlighted.'
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsbXpoZkNIcXgxc3M/components_dialogs_simplemenus3.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsWVNNYWoxV3hYT28/components_dialogs_simplemenus5.png',
+      img1_text: 'The currently selected menu item aligns vertically over the list item.',
+      img2_text: 'The first menu item is arbitrarily positioned over the list item, regardless of the currently selected menu item.',
+      description: 'When opened, simple menus attempt to vertically align the currently selected menu item with the list item. The currently selected menu item is highlighted.'
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7NzVwUlN5aDlPVU0/components_dialogs_simplemenus6.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7WEFUUlg1WjR1eHM/components_dialogs_simplemenus7.png',
+      img1_text: 'Simple menus appear over their emitting element.',
+      img2_text: 'Simple menus do not appear below their emitting element.',
+      description: 'Simple menus appear over their emitting element, not below.'
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsM1JlMU1GQlVCajg/components_dialogs_simplemenus10.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsdzQ5ekJONHpJaU0/components_dialogs_simplemenus11.png',
+      img1_text: 'Use a simple dialog if any text in a simple menu wraps to a second line.',
+      img2_text: 'Don’t truncate text in a simple menu. Use a simple dialog instead.',
+      description: 'If text in a simple menu wraps to a second line, use a simple dialog instead. Simple dialogs can have rows with varying heights.'
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsM3lfVmVsWk9KRUE/components_dialogs_simplemenus12.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsX1p4YVVlWjk4MTA/components_dialogs_simplemenus13.png',
+      img1_text: 'Display a scroll bar by default for scrollable content.',
+      img2_text: 'Without a scroll bar, it’s unclear if there are additional menu items available.',
+      description: 'Menus show a persistent scroll bar when content is scrollable.'
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsdF8wbDhKSUpVM2s/components_dialogs_simplemenus14.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B6Okdz75tqQsdTVtZzBDcVVQSE0/components_dialogs_simplemenus15.png',
+      img1_text: 'Each menu item appears only once.',
+      img2_text: 'Don’t display a duplicate of the selected element.',
+      description: ''
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B_udO5B8pzrzV05ZRkdMOFRidkU/components_dialogs_simplemenus16.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B_udO5B8pzrzYnRPT2RCdkh6R28/components_dialogs_simplemenus17.png',
+      img1_text: 'Simple menus are left-aligned regardless of touch location.',
+      img2_text: 'Simple menus do not reposition based on the touch location.',
+      description: 'Simple menus are always left-aligned with the start of the list item text and do not reposition horizontally based on the touch location.'
     },
   ],
   'Layout': [
@@ -376,6 +562,13 @@ module.exports = {
       img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bzhp5Z4wHba3ODh2X0tOeTVXcjQ/components_cards_action3-dont.png',
       img1_text: 'Use cards as an entry point to more detailed information. ',
       img2_text: 'Cards provide context and an entry point to more robust information and views. Don\'t overload cards with extraneous information or actions. Inline links within text content are strongly discouraged.',
+      description: ''
+    },
+    {
+      img1: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B9PCOJnbdRP6elVJaFhzQ3lKems/layout_principles_papercraft_toolbars2.png',
+      img2: 'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0B9PCOJnbdRP6WG9DcWl0T2FxcFk/layout_principles_papercraft_toolbars3.png',
+      img1_text: 'Constrain width to less than the full length of its material.',
+      img2_text: 'Never allow a sheet of material to be split by another persistent sheet of material.',
       description: ''
     },
     {
