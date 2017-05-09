@@ -181,11 +181,11 @@ module.exports = {
   ],
   'Error page': [
     {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
+      img2: 'http://neilpatel.com/wp-content/uploads/2015/11/image201.png',
+      img1: 'https://i.imgur.com/cSurBVV.jpg',
+      img2_text: 'Target gives some of the fault to the user, but it is unlikely the customer typed in a deep link URL manually.',
+      img1_text: 'Amazon goes with a humbler approach and assumes its own fault.',
+      description: 'Don’t blame the user first.'
     },
   ],
   'Search': [
@@ -301,20 +301,20 @@ module.exports = {
   ],
   'Form': [
     {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
+      img1: 'https://i.imgur.com/EzwnhjX.jpg',
+      img2: 'https://designshack.net/wp-content/uploads/forms_css_3.jpg',
+      img1_text: 'Fields aree sized according to expected input length',
+      img2_text: 'Not a lof of structure',
+      description: 'A form that sizes the input fields according to their expected input is easier to read.'
     },
   ],
   'Chat': [
     {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
+      img2: 'https://i.imgur.com/FMk03G0.jpg',
+      img1: 'https://lh3.googleusercontent.com/W8iDC5yfF_a4rS_S9jAHCqRDSSRPrmKL7QArfIRIGvp6DSELII5oNoMo-xDLFVTNoA=h900-rw',
+      img1_text: 'Compact, more messages at a glance, less scrolling.',
+      img2_text: 'Too much padding and space between messages.',
+      description: 'Primary function of a chat is to respond and send messages to people.'
     }
   ],
   'Notification': [
@@ -363,11 +363,11 @@ module.exports = {
   ],
   'Map': [
     {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
+      img1: 'https://i.imgur.com/Nidbcqn.jpg',
+      img2: 'https://i.imgur.com/ZgmeXzy.jpg',
+      img1_text: 'Map features are clearly visible and can be distinguished with ease',
+      img2_text: 'Hard to read street names.',
+      description: 'Give contrast to different elements of the map.'
     }
   ],
   'List': [
