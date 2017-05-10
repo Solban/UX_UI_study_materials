@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './components/Home.vue';
+import LandingPage from './components/LandingPage.vue';
 
 Vue.use(Router);
 
@@ -9,8 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home
+      name: 'LandingPage',
+      component: LandingPage
     },
     {
       path: '/:category',

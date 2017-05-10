@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <nav>
-      <div id="logo">Good vs Bad UI</div>
+      <router-link to="/">
+        <div id="logo">Good vs Bad UI</div>
+      </router-link>
       <router-link :to="'/' + c" v-for="(c,i) in categories" :key="i" :class="{ active: c === active}">
         <div class="category" @click="active = c">{{ c }}</div>
       </router-link>
@@ -18,7 +20,7 @@ export default {
   data () {
     return {
       categories: Object.keys(examples),
-      active: 'Button'
+      active: ''
     }
   },
   mounted() {
@@ -53,6 +55,11 @@ export default {
     height: 100%;
     width: 100%;
     background: #f5f5f5;
+    overflow-x: hidden;
+  }
+
+  #app {
+    height: 100%;
   }
 
   nav {
