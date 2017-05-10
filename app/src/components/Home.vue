@@ -4,9 +4,9 @@
             <h1>Which UI is good?</h1>
             <div class="examples">
                 <div class="example left" @click="showCorrect = true">
-                    <img :src="left.img">
+                    <img :class="{hideCorrect: !showCorrect}" :src="left.img">
                 </div><div class="example" @click="showCorrect = true">
-                    <img :src="right.img">
+                    <img :class="{hideCorrect: !showCorrect}" :src="right.img">
                 </div>
                 <div class="example left">
                     <div class="correct" v-if="showCorrect && examples[active].img1 === left.img">Do</div>
@@ -46,6 +46,14 @@
         this.examples = [examples[this.$route.params['category']][id]]
       }
       this.randomize();
+      let _this = this;
+      document.onkeydown = function(e) {
+        if (e.keyCode === 39) {
+          _this.next();
+        } else if (e.keyCode === 37) {
+          _this.previous();
+        }
+      }
     },
     methods: {
       randomize() {
@@ -119,12 +127,11 @@
     .example img {
         max-width: 100%;
         max-height: 600px;
-        border-bottom: 5px solid transparent;
+        border: 5px solid transparent;
     }
 
-    .example img:hover {
-        background: #aaa;
-        border-bottom: 5px solid #aaa;
+    .example img.hideCorrect:hover {
+        border: none;
     }
 
     .example.left {

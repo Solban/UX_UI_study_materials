@@ -120,27 +120,6 @@ module.exports = {
       img2_text: 'Don’t associate floating action buttons with every element on a screen.',
       description: ''
     },
-    {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
-    },
-    {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
-    },
-    {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
-    },
   ],
   'Dialog': [
     {
@@ -274,14 +253,7 @@ module.exports = {
       img1_text: '',
       img2_text: '',
       description: 'Do not combine text labels with icons. Use either all text labels or all icon labels.'
-    },
-    {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
-    },
+    }
   ],
   'Tooltip': [
     {
@@ -338,28 +310,7 @@ module.exports = {
       img1_text: '',
       img2_text: '',
       description: 'If an action is present, comply with dialog spacing and affordance rules. For two or more actions, use a dialog, not a snackbar, even when one of the actions is a dismiss action. If the action described in the snackbar is important enough to block the use of the screen, it should be a dialog.'
-    },
-    {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
-    },
-    {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
-    },
-    {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
-    },
+    }
   ],
   'Map': [
     {
@@ -405,20 +356,6 @@ module.exports = {
       img1_text: 'Alphabetical sorting makes information easier to find.',
       img2_text: 'Don’t display information in random order; if the UI doesn’t allow the user to sort a list, your app should use a logical sort order.',
       description: 'List tiles can be sorted or filtered by date, file size, alphabetical order, or other parameters.'
-    },
-    {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
-    },
-    {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
     },
   ],
   'Menu': [
@@ -571,13 +508,6 @@ module.exports = {
       img2_text: 'Never allow a sheet of material to be split by another persistent sheet of material.',
       description: ''
     },
-    {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
-    },
   ],
   'Color': [
     {
@@ -635,34 +565,6 @@ module.exports = {
       img1_text: 'Use black or white iconography if the bottom navigation bar is colored.',
       img2_text: 'Avoid pairing colored icons with a colored bottom navigation bar.',
       description: 'If the bottom navigation bar is colored, make the icon and text label of the current action black or white.'
-    },
-    {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
-    },
-    {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
-    },
-    {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
-    },
-    {
-      img1: '',
-      img2: '',
-      img1_text: '',
-      img2_text: '',
-      description: ''
     },
   ]
 };
